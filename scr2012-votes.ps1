@@ -57,3 +57,12 @@ function get-lower() {
 }
 
 $votes = @(get-top10) + @(get-lower)
+
+if($votes.Count -ne 100) {
+    Write-Error ("Number of characters is {0}. Expecting 100." -f $votes.Count)
+}
+if(($votes | group CID | measure -Maximum Count).Maximum -ne 1) {
+    Write-Error "CID Duplicated"
+}
+$votes | group Rank |? {$_.Count -ge 2} |% {Write-Warning ("{0} duplicates in rank {1}" -f $_.Count,$_.Name)}
+
