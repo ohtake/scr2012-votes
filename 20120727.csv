@@ -1,5 +1,4 @@
-﻿#TYPE System.Management.Automation.PSCustomObject
-"Name","Votes","Date","Rank","CID"
+﻿"Name","Votes","Date","Rank","CID"
 "ハローキティ","137669","2012/07/27 0:00:00","1","28"
 "マイメロディ","122980","2012/07/27 0:00:00","2","3"
 "リトルツインスターズ","90905","2012/07/27 0:00:00","3","54"
